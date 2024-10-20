@@ -12,7 +12,7 @@ const Booking = () => {
 
   
   return (
-    <motion.div className="px-5 pt-3 rounded-lg m-5 h-[85vh] border border-gray-200 bg-gray-50 shadow-md"
+    <motion.div className="px-5 pt-3 rounded-lg m-5 h-fit py-3 border border-gray-200 bg-gray-50 shadow-md"
      initial={{ opacity: 0 }}
      animate={{ opacity: 1 }}
      transition={{ duration: 0.5, ease: "easeInOut" }}

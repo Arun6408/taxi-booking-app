@@ -18,6 +18,7 @@ const Cars = () => {
   }, [distanceDuration]);
 
 
+  const widthOfCar = window.screen.width > 768 ? 100:50;
 
   return (
     <div>
@@ -26,7 +27,7 @@ const Cars = () => {
         {carsList.map((item) => (
           <div
             key={item.id}
-            className={`border flex flex-row md:flex-col rounded-2xl gap-2 py-2 hover:bg-gray-50 px-2 cursor-pointer ${
+            className={`border flex flex-col rounded-2xl gap-2 py-2 hover:bg-gray-50 px-2 cursor-pointer ${
               selectedCar === item.id
                 ? "bg-green-50 border border-green-300"
                 : ""
@@ -39,11 +40,11 @@ const Cars = () => {
             <Image
               src={item.image}
               alt={`image of ${item.name}`}
-              width={100}
+              width={widthOfCar}
               height={50}
               className="md:w-full"
             />
-            <div className="flex justify-between md:p-2 flex-col md:flex-row">
+            <div className="flex justify-between md:p-2 flex-row md:flex-col">
               <p className="text-xs text-gray-500 font-semibold">{item.name}</p>
               {price > 0 && (
                 <p className="float-right text-green-700  text-sm font-semibold">
