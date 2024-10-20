@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
   return (
     <motion.div 
-     className='w-[100%] md:w-[80%] flex mx-2 mt-5 pr-4 px-6 border shadow-md rounded-full border-gray-100'
+     className='w-screen md:w-[80%] flex mx-2 md:mx-auto mt-5 pr-4 px-6 border shadow-md rounded-full border-gray-100'
      initial={{ opacity: 0, scale: 0.8, y:-15 }}
      animate={{ opacity: 1, scale: 1 ,y:0}}
      transition={{ duration: 0.3 }}
