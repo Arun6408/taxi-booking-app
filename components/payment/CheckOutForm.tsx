@@ -37,11 +37,13 @@ const CheckOutForm = ({ amount }: any) => {
 
     const { clientSecret } = await res.json();
 
+    console.log(window.location.hostname)
+
     const { error } = await stripe.confirmPayment({
       clientSecret,
       elements,
       confirmParams: {
-        return_url: `http://localhost:3000/payment-success?amount=${amount}&eta=${eta}`,
+        return_url: `${window.location.hostname}/payment-success?amount=${amount}&eta=${eta}`,
       },
     });
 

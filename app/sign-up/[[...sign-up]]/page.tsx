@@ -14,7 +14,7 @@ export default function Page() {
         <div className="absolute inset-0 w-36 md:w-48 aspect-square rounded-full bg-[radial-gradient(circle,_#a44cda,#906ad778)] -translate-x-1/2 shadow-2xl -translate-y-[14rem] backdrop-blur-lg transition-opacity duration-500 ease-in-out opacity-0 hover:opacity-100"></div>
       </motion.div>
 
-       <SignUp afterSignOutUrl='/'/>
+       <SignUp forceRedirectUrl={'/'}/>
     </div>
   );
 }
